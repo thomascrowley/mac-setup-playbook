@@ -1,0 +1,40 @@
+[user]
+
+[color]
+        branch = auto
+        diff = auto
+        interactive = auto
+        status = auto
+[alias]
+        co = checkout
+        ci = commit
+        st = status
+        dc = diff --cached
+        lg = log --decorate --stat --graph --pretty=format:'%C(yellow)%h%Creset (%ar - %Cred%an%Creset), %s%n'
+        lp = log -p
+        logp = log -p
+        br = branch
+        bl = branch -l
+[help]
+        autocorrect = 20
+[core]
+        whitespace = cr-at-eol
+        excludesfile = ~/.gitignore
+        autocrlf = input
+        editor = vi
+[http]
+        sslVerify = false
+[pull]
+        rebase = true
+[push]
+        default = simple
+[status]
+        showUntrackedFiles = all
+# [commit]
+#         gpgsign = true
+[remote "origin"]
+        prune = true
+# [gpg]
+#         program = gpg
+[init]
+	defaultBranch = main
