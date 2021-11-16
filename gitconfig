@@ -1,4 +1,6 @@
 [user]
+	name = Thomas
+	email = 15927917+thomascrowley@users.noreply.github.com
 
 [color]
         branch = auto
@@ -15,6 +17,7 @@
         logp = log -p
         br = branch
         bl = branch -l
+        show-deleted = for-each-ref --format '%(refname:short) %(upstream:track)' | awk '$2 == "[gone]" {print $1}'
 [help]
         autocorrect = 20
 [core]
@@ -30,11 +33,11 @@
         default = simple
 [status]
         showUntrackedFiles = all
-# [commit]
-#         gpgsign = true
+[commit]
+#        gpgsign = true
 [remote "origin"]
         prune = true
-# [gpg]
-#         program = gpg
+[gpg]
+	program = gpg2
 [init]
 	defaultBranch = main

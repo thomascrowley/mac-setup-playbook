@@ -110,6 +110,7 @@ alias ohmyzsh="mate ~/.oh-my-zsh"
 alias tar=gtar
 alias sed=gsed
 alias whatismyip="curl ifconfig.me"
+alias gcloudwhoami='gcloud auth list --format='\''value(account)'\'' --filter='\''status="ACTIVE"'\'
 
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
