@@ -6,7 +6,10 @@
 
 ## Running
 
-* Docs to come: for now check the makefile
+```bash
+./bootstrap.sh
+```
+
 
 ## TODO
 
