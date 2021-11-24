@@ -31,8 +31,6 @@ brew "automake"
 brew "aws-rotate-key"
 # Official Amazon AWS command-line interface
 brew "awscli", link: false
-# Microsoft Azure CLI 2.0
-brew "azure-cli"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
 # Clone of cat(1) with syntax highlighting and Git integration
@@ -113,10 +111,6 @@ brew "harfbuzz"
 brew "pango"
 # Kubernetes package manager
 brew "helm"
-# Load testing and performance measurement application
-brew "jmeter"
-# Regular expressions library
-brew "oniguruma"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Run local Kubernetes cluster in Docker
@@ -183,10 +177,7 @@ brew "tree"
 brew "wget"
 # General-purpose lossless data-compression library
 brew "zlib"
-# Prebuilt OpenJDK binaries
-cask "adoptopenjdk8"
 cask "font-fira-code"
-cask "java8"
 # Visual diff and merge tool
 cask "meld"
 mas "Amphetamine", id: 937984704
@@ -194,7 +185,6 @@ mas "Bitwarden", id: 1352778147
 mas "Developer", id: 640199958
 mas "Magnet", id: 441258766
 mas "Meeter", id: 1510445899
-mas "OneDrive", id: 823766827
 mas "Slack", id: 803453959
 mas "Tadam", id: 531349534
 mas "Todoist", id: 585829637
