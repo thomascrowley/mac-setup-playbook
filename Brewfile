@@ -2,6 +2,7 @@ tap "adoptopenjdk/openjdk"
 tap "caskroom/versions"
 tap "homebrew/bundle"
 tap "homebrew/cask"
+tap "homebrew/cask-fonts"
 tap "homebrew/core"
 tap "rhyeal/aws-rotate-iam-keys", "https://github.com/rhyeal/aws-rotate-iam-keys"
 tap "stefansundin/tap"
@@ -136,8 +137,6 @@ brew "mas"
 brew "maven"
 # Multiple Repository management tool
 brew "mr"
-# Text-based UI library
-brew "ncurses"
 # Open source, general-purpose policy engine
 brew "opa"
 # Tool for creating identical machine images for multiple platforms
@@ -184,16 +183,14 @@ brew "tree"
 brew "wget"
 # General-purpose lossless data-compression library
 brew "zlib"
-# Ookla Speedtest
-brew "teamookla/speedtest/speedtest"
 # Prebuilt OpenJDK binaries
 cask "adoptopenjdk8"
+cask "font-fira-code"
 cask "java8"
 # Visual diff and merge tool
 cask "meld"
 mas "Amphetamine", id: 937984704
 mas "Bitwarden", id: 1352778147
-mas "Countdowns", id: 926707738
 mas "Developer", id: 640199958
 mas "Magnet", id: 441258766
 mas "Meeter", id: 1510445899
