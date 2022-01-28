@@ -11,3 +11,7 @@ ln -sfn ~/.dotfiles/gitconfig ~/.gitconfig
 
 # Install fonts
 git clone --branch=20160623-Stable https://github.com/antijingoist/open-dyslexic.git ~/opendyslexic
+
+
+# Set up iterm
+wget -O ~/.dotfiles/iterm2/3024_Night.itermcolors https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/3024%20Night.itermcolors
