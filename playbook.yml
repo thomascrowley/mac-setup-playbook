@@ -1,0 +1,41 @@
+---
+- hosts: localhost
+  become: no
+
+  tasks:
+    - name: Get ZSH Custom Path
+      shell: |
+        echo "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}"
+      register: zsh_custom
+    - name: set ZSH Custom Path
+      set_fact:
+        zsh_custom: "{{ zsh_custom.stdout }}"
+
+    - name: Install ZSH Plugins & Themes
+      git:
+        repo: "{{item.repo}}"
+        dest: "{{zsh_custom}}/{{item.dest}}"
+        depth: 1
+      with_items:
+        - repo: https://github.com/zsh-users/zsh-autosuggestions
+          dest: "plugins/zsh-autosuggestions"
+        - repo: https://github.com/romkatv/powerlevel10k.git
+          dest: themes/powerlevel10k
+
+    - name: clone fonts
+      git:
+        repo: https://github.com/antijingoist/open-dyslexic.git
+        dest: ~/custom_fonts/opendyslexic
+        version: 20160623-Stable
+        single_branch: true
+
+    - name: link dotfiles
+      file:
+        src: "~/.dotfiles/{{ item.file }}"
+        dest: "~/.{{ item.file }}"
+        state: link
+      with_items:
+        - file: vimrc
+        - file: zshrc
+        - file: p10k.zsh
+        - file: gitconfig

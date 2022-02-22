@@ -1,18 +1,21 @@
 # My Personal Dotfiles
 
+[[TOC]]
+
 ## Clone
 
-```git clone https://github.com/ThomasCrowley/dotfiles ~/.dotfiles```
+`git clone https://github.com/ThomasCrowley/dotfiles ~/.dotfiles`
 
 ## Running
 
+I am usign ansible-playbook to set up my dotfiles. To plan the changes run:
+
 ```bash
-./bootstrap.sh
+ansible-playbook playbook.yml --check
 ```
 
+Then to apply them run
 
-## TODO
-
-* Add code to handle different OS in makefile.
-* write a script to get all the extensions names and add them to a file
-* write to a script to loop through names and install them
+```bash
+ansible-playbook playbook.yml
+```
