@@ -1,5 +1,5 @@
 [user]
-	name = Thomas
+	name = Thomas Crowley
 	email = 15927917+thomascrowley@users.noreply.github.com
 
 [color]
@@ -41,3 +41,8 @@
 	program = gpg2
 [init]
 	defaultBranch = main
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f

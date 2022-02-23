@@ -1,0 +1,6 @@
+- name: Get Dyslexic Fonts
+  git:
+    repo: https://github.com/antijingoist/open-dyslexic.git
+    dest: ~/custom_fonts/opendyslexic
+    version: 20160623-Stable
+    single_branch: true
