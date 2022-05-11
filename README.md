@@ -1,6 +1,9 @@
 # My Personal Dotfiles
 
-[[TOC]]
+## Prereqs
+
+* Ansible is installed
+* [ohmyzsh](https://ohmyz.sh/#install) is installed
 
 ## Clone
 
