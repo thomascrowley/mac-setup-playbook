@@ -1,7 +1,32 @@
+- name: check if installed
+  stat:
+    path: "~/.oh-my-zsh/oh-my-zsh.sh"
+  register: ohmyzsh
+
+- name: create tmp file
+  file:
+    path: ./tmp/zsh
+    state: directory
+    recurse: yes
+  when: ohmyzsh.stat.exists == False
+
+- name: Download install script
+  get_url:
+    url: https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+    dest: ./tmp/zsh/install.sh
+    mode: '0744'
+  when: ohmyzsh.stat.exists == False
+
+- name: Install ohmyzsh
+  shell: |
+    ./tmp/zsh/install.sh
+  when: ohmyzsh.stat.exists == False
+
 - name: Get ZSH Custom Path
   shell: |
     echo "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}"
   register: zsh_custom
+
 - name: set ZSH Custom Path
   set_fact:
     zsh_custom: "{{ zsh_custom.stdout }}"

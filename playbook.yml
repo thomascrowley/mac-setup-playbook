@@ -4,6 +4,7 @@
   connection: local
 
   roles:
+    - ohmyzsh
     - dotfiles
     - fonts
-    - ohmyzsh
+
