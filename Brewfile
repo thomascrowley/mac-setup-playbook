@@ -1,48 +1,35 @@
-tap "adoptopenjdk/openjdk"
-tap "caskroom/versions"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
-tap "rhyeal/aws-rotate-iam-keys", "https://github.com/rhyeal/aws-rotate-iam-keys"
-tap "stefansundin/tap"
-tap "teamookla/speedtest"
 # C/C++ resolver library and DNS resolver utilities
 brew "adns"
+# Tool for generating GNU Standards-compliant Makefiles
+brew "automake"
 # GNU database manager
 brew "gdbm"
-# GNU internationalization (i18n) and localization (l10n) library
-brew "gettext"
-# Portable Foreign Function Interface library
-brew "libffi"
 # Library for command-line editing
 brew "readline"
 # General-purpose data compression with high compression ratio
 brew "xz"
-# Core application library for C
-brew "glib"
 # Interpreted, interactive, object-oriented programming language
-brew "python@3.8"
-# Automatic configure script builder
-brew "autoconf"
-# Tool for generating GNU Standards-compliant Makefiles
-brew "automake"
-# Easily rotate your AWS access key
-brew "aws-rotate-key"
+brew "python@3.9"
 # Official Amazon AWS command-line interface
-brew "awscli", link: false
+brew "awscli"
+# Microsoft Azure CLI 2.0
+brew "azure-cli"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
-# C/C++ and Java libraries for Unicode and globalization
-brew "icu4c"
 # Platform built on V8 to build network applications
 brew "node"
 # Secure and free password manager for all of your devices
 brew "bitwarden-cli"
-# Manage compile and link flags for libraries
-brew "pkg-config"
+# Portable Foreign Function Interface library
+brew "libffi"
+# Core application library for C
+brew "glib"
 # Cross-platform make
 brew "cmake"
 # GNU multiple precision arithmetic library
@@ -51,10 +38,6 @@ brew "gmp"
 brew "coreutils"
 # Configurable talking characters in ASCII art
 brew "cowsay"
-# C string library for manipulating Unicode strings
-brew "libunistring"
-# International domain name library (IDNA2008, Punycode and TR46)
-brew "libidn2"
 # C library implementing the SSH2 protocol
 brew "libssh2"
 # Get a file from an HTTP, HTTPS or FTP server
@@ -71,8 +54,6 @@ brew "gnu-getopt"
 brew "gnu-sed"
 # GNU version of the tar archiving utility
 brew "gnu-tar"
-# Asynchronous event library
-brew "libevent"
 # ASN.1 structure parser library
 brew "libtasn1"
 # Low-level cryptographic library
@@ -83,10 +64,6 @@ brew "p11-kit"
 brew "unbound", link: false
 # GNU Transport Layer Security (TLS) Library
 brew "gnutls"
-# Common error values for all GnuPG components
-brew "libgpg-error"
-# Assuan IPC Library
-brew "libassuan"
 # Cryptographic library based on the code from GnuPG
 brew "libgcrypt"
 # X.509 and CMS library
@@ -95,32 +72,28 @@ brew "libksba"
 brew "libusb"
 # New GNU portable threads library
 brew "npth"
-# Passphrase entry dialog utilizing the Assuan protocol
-brew "pinentry"
 # GNU Pretty Good Privacy (PGP) package
 brew "gnupg"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
 # Fast linters runner for Go
 brew "golangci-lint"
-# Java-based scripting language
-brew "groovy"
+# GNU grep, egrep and fgrep
+brew "grep"
 # OpenType text shaping engine
 brew "harfbuzz"
-# Framework for layout and rendering of i18n text
-brew "pango"
 # Kubernetes package manager
 brew "helm"
+# Regular expressions library
+brew "oniguruma"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Run local Kubernetes cluster in Docker
 brew "kind"
-# Kubernetes command-line interface
-brew "kubernetes-cli"
-# LastPass command-line interface tool
-brew "lastpass-cli"
-# YAML Parser
-brew "libyaml"
+# Framework for layout and rendering of i18n text
+brew "pango"
+# Library to render SVG files using Cairo
+brew "librsvg"
 # Rainbows and unicorns in your console!
 brew "lolcat"
 # Utility for directing compilation
@@ -129,24 +102,22 @@ brew "make"
 brew "mas"
 # Java-based project management
 brew "maven"
-# Multiple Repository management tool
-brew "mr"
+# Run a Kubernetes cluster locally
+brew "minikube"
+# Port scanning utility for large networks
+brew "nmap"
 # Open source, general-purpose policy engine
 brew "opa"
 # Tool for creating identical machine images for multiple platforms
 brew "packer", link: false
-# Swiss-army knife of markup format conversion
-brew "pandoc"
-# Pinentry for GPG on Mac
-brew "pinentry-mac"
 # Tool for managing OCI containers and pods
 brew "podman"
 # Python version management
 brew "pyenv"
 # Pyenv plugin to manage virtualenv
 brew "pyenv-virtualenv"
-# Install various Ruby versions and implementations
-brew "ruby-build"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.8"
 # Ruby version manager
 brew "rbenv"
 # Auto-installs gems for Ruby installs
@@ -173,13 +144,24 @@ brew "tflint"
 brew "tmux"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Vi 'workalike' with many additional features
+brew "vim"
 # Internet file retriever
 brew "wget"
 # General-purpose lossless data-compression library
 brew "zlib"
+# App to build and share containerized applications and microservices
+cask "docker"
+# Add fira code font
 cask "font-fira-code"
-# Visual diff and merge tool
-cask "meld"
+# Web browser
+cask "google-chrome"
+# Terminal emulator as alternative to Apple's Terminal app
+cask "iterm2"
+# Development environment
+cask "vagrant"
+# Open-source code editor
+cask "visual-studio-code"
 mas "Amphetamine", id: 937984704
 mas "Bitwarden", id: 1352778147
 mas "Developer", id: 640199958
@@ -190,3 +172,4 @@ mas "Tadam", id: 531349534
 mas "Todoist", id: 585829637
 mas "ToothFairy", id: 1191449274
 mas "Xcode", id: 497799835
+mas "Yubico Authenticator", id: 1497506650
