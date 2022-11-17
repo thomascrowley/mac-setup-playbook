@@ -1,7 +1,6 @@
 [user]
-	name = Thomas Crowley
-	email = 15927917+thomascrowley@users.noreply.github.com
-
+  name = Thomas Crowley
+  useConfigOnly = true
 [color]
         branch = auto
         diff = auto
@@ -31,6 +30,7 @@
         rebase = true
 [push]
         default = simple
+        autoSetupRemote = true
 [status]
         showUntrackedFiles = all
 [commit]
@@ -38,7 +38,7 @@
 [remote "origin"]
         prune = true
 [gpg]
-	program = gpg2
+	program = gpg
 [init]
 	defaultBranch = main
 [filter "lfs"]
@@ -46,3 +46,9 @@
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
+[credential]
+	helper = osxkeychain
+[include]
+  path = ~/.gitconfig.personal
+[includeIf "gitdir:~/GitHub/work/"]
+  path = ~/.gitconfig.work
