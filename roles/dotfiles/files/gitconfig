@@ -1,54 +1,71 @@
 [user]
-  name = Thomas Crowley
-  useConfigOnly = true
+    name = Thomas Crowley
+    useConfigOnly = true
+
 [color]
-        branch = auto
-        diff = auto
-        interactive = auto
-        status = auto
+    branch = auto
+    diff = auto
+    interactive = auto
+    status = auto
+
 [alias]
-        co = checkout
-        ci = commit
-        st = status
-        dc = diff --cached
-        lg = log --decorate --stat --graph --pretty=format:'%C(yellow)%h%Creset (%ar - %Cred%an%Creset), %s%n'
-        lp = log -p
-        logp = log -p
-        br = branch
-        bl = branch -l
-        show-deleted = for-each-ref --format '%(refname:short) %(upstream:track)' | awk '$2 == "[gone]" {print $1}'
+    co = checkout
+    ci = commit
+    st = status
+    dc = diff --cached
+    lg = log --decorate --stat --graph --pretty=format:'%C(yellow)%h%Creset (%ar - %Cred%an%Creset), %s%n'
+    lp = log -p
+    logp = log -p
+    br = branch
+    bl = branch -l
+    show-deleted = for-each-ref --format '%(refname:short) %(upstream:track)' | awk '$2 == "[gone]" {print $1}'
+
 [help]
-        autocorrect = 20
+    autocorrect = 20
+
 [core]
-        whitespace = cr-at-eol
-        excludesfile = ~/.gitignore
-        autocrlf = input
-        editor = vi
+    whitespace = cr-at-eol
+    excludesfile = ~/.gitignore
+    autocrlf = input
+    editor = vi
+
 [http]
-        sslVerify = false
+    sslVerify = false
+
 [pull]
-        rebase = true
+    rebase = true
+
 [push]
-        default = simple
-        autoSetupRemote = true
+    default = simple
+    autoSetupRemote = true
+
 [status]
-        showUntrackedFiles = all
+    showUntrackedFiles = all
+
 [commit]
-#        gpgsign = true
+    gpgsign = true
+
 [remote "origin"]
-        prune = true
+    prune = true
+
 [gpg]
 	program = gpg
+
 [init]
 	defaultBranch = main
+
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
+
 [credential]
-	helper = osxkeychain
+    helper = osxkeychain
+
+# https://markentier.tech/posts/2021/02/github-with-multiple-profiles-gpg-ssh-keys/
 [include]
-  path = ~/.gitconfig.personal
+    path = ~/.gitconfig.personal
+
 [includeIf "gitdir:~/GitHub/work/"]
-  path = ~/.gitconfig.work
+    path = ~/.gitconfig.work
