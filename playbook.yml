@@ -3,7 +3,17 @@
   become: no
   connection: local
 
+  vars_files:
+    - secrets.yml
+  vars:
+    homebrew_user: thomas.crowley
+    homebrew_group: staff
+    homebrew_installed_packages:
+      - mysql
+
   roles:
+    - elliotweiser.osx-command-line-tools
+    - geerlingguy.homebrew
     - ohmyzsh
     - dotfiles
     - fonts

@@ -1,4 +1,5 @@
 ---
 roles:
-  # Install a role from Ansible Galaxy.
-  - name: geerlingguy.homebrew
+  - name: elliotweiser.osx-command-line-tools
+collections:
+  - name: geerlingguy.mac
