@@ -1,0 +1,9 @@
+- name: Add helpful scripts into my path
+  become: yes
+  file:
+    src: "{{ lookup('env','HOME') }}/.dotfiles/roles/scripts/files/{{ item.file }}"
+    dest: "/usr/local/bin/{{ item.file }}"
+    state: link
+    force: yes
+  with_items:
+    - file: morning

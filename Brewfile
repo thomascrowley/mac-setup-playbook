@@ -5,21 +5,19 @@ tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
-tap "rhyeal/aws-rotate-iam-keys", "https://github.com/rhyeal/aws-rotate-iam-keys"
 tap "stefansundin/tap"
-tap "teamookla/speedtest"
 # C/C++ resolver library and DNS resolver utilities
 brew "adns"
 # YAML Parser
 brew "libyaml"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.10"
 # Automate deployment, configuration, and upgrading
 brew "ansible"
 # Automatic configure script builder
 brew "autoconf"
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.10"
 # Microsoft Azure CLI 2.0
 brew "azure-cli"
 # Bourne-Again SHell, a UNIX command interpreter
@@ -60,10 +58,10 @@ brew "libidn2"
 brew "libssh2"
 # Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
-# Pack, ship and run any application as a lightweight container
-brew "docker"
 # Command-line fuzzy finder written in Go
 brew "fzf"
+# GNU compiler collection
+brew "gcc"
 # GitHub command-line tool
 brew "gh"
 # Distributed revision control system
@@ -144,18 +142,20 @@ brew "pango"
 brew "pinentry-mac"
 # Tool for managing OCI containers and pods
 brew "podman"
+# Framework for managing multi-language pre-commit hooks
+brew "pre-commit", link: false
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.8"
 # Powerful, clean, object-oriented scripting language
 brew "ruby"
-# Generate ASCII art with terminal, shell, and OS info
-brew "screenfetch"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
 # Prints a steam locomotive if you type sl instead of ls
 brew "sl"
 # User interface to the TELNET protocol
 brew "telnet"
+# Tool to generate documentation from Terraform modules
+brew "terraform-docs"
 # Improve Terraform's plan output
 brew "terraform_landscape"
 # Terraform version manager inspired by rbenv
@@ -168,29 +168,37 @@ brew "thefuck"
 brew "tmux"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Executes a program periodically, showing output fullscreen
+brew "watch"
 # Internet file retriever
 brew "wget"
 # Tool for managing your YubiKey configuration
 brew "ykman"
 # YubiKey personalization library and tool
 brew "ykpers"
-# Process YAML documents from the CLI
+# Process YAML, JSON, XML, CSV and properties documents from the CLI
 brew "yq"
 # General-purpose lossless data-compression library
 brew "zlib"
 brew "hashicorp/tap/sentinel"
 # Vault
 brew "hashicorp/tap/vault"
-# Ookla Speedtest
-brew "teamookla/speedtest/speedtest"
 # Free monospaced font with programming ligatures
 cask "font-fira-code"
+# Web browser
+cask "google-chrome"
 # Set of tools to manage resources and applications hosted on Google Cloud
 cask "google-cloud-sdk"
 # Open-source Markdown editor
 cask "macdown"
+# Simple application that will prevent iTunes or Apple Music from launching
+cask "notunes"
 # Browse, manage, inspect containers and images
 cask "podman-desktop"
+# Collaboration platform for API development
+cask "postman"
+# Music streaming service
+cask "spotify"
 mas "Amphetamine", id: 937984704
 mas "Bitwarden", id: 1352778147
 mas "Developer", id: 640199958

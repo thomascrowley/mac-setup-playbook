@@ -6,14 +6,16 @@
   vars_files:
     - secrets.yml
   vars:
-    homebrew_user: thomas.crowley
-    homebrew_group: staff
+  #TODO: makae this work
+    # homebrew_use_brewfile: true
+    # homebrew_brewfile_dir: '~/.dotfiles'
     homebrew_installed_packages:
       - mysql
 
   roles:
     - elliotweiser.osx-command-line-tools
-    - geerlingguy.homebrew
+    - geerlingguy.mac.homebrew
     - ohmyzsh
     - dotfiles
     - fonts
+    - scripts

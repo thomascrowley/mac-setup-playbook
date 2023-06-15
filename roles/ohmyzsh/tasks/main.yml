@@ -42,3 +42,5 @@
       dest: "plugins/zsh-autosuggestions"
     - repo: https://github.com/romkatv/powerlevel10k.git
       dest: themes/powerlevel10k
+    - repo: https://github.com/marlonrichert/zsh-autocomplete.git
+      dest: plugins/zsh-autocomplete

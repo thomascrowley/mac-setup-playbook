@@ -11,6 +11,7 @@
 [alias]
     co = checkout
     ci = commit
+    ce = commit --allow-empty -m 'empty commit' 
     st = status
     dc = diff --cached
     lg = log --decorate --stat --graph --pretty=format:'%C(yellow)%h%Creset (%ar - %Cred%an%Creset), %s%n'
@@ -19,6 +20,7 @@
     br = branch
     bl = branch -l
     show-deleted = for-each-ref --format '%(refname:short) %(upstream:track)' | awk '$2 == "[gone]" {print $1}'
+    pom = pull origin main
 
 [help]
     autocorrect = 20
@@ -53,6 +55,7 @@
 
 [init]
 	defaultBranch = main
+	templatedir = /Users/Thomas.Crowley/.git-templatedir
 
 [filter "lfs"]
 	process = git-lfs filter-process
@@ -67,5 +70,5 @@
 [include]
     path = ~/.gitconfig.personal
 
-[includeIf "gitdir:~/GitHub/work/"]
+[includeIf "gitdir:~/GitHub/lbg-cloud-platform/"]
     path = ~/.gitconfig.work
