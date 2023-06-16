@@ -48,9 +48,3 @@ Then to apply them run
 ```bash
 ansible-playbook playbook.yml --ask-vault-pass
 ```
-
-### If you're running a mac and want to install the software you run
-
-```bash
-brew bundle --file=Brewfile
-```
