@@ -11,7 +11,7 @@
 [alias]
     co = checkout
     ci = commit
-    ce = commit --allow-empty -m 'empty commit' 
+    ce = commit --allow-empty -m 'empty commit'
     st = status
     dc = diff --cached
     lg = log --decorate --stat --graph --pretty=format:'%C(yellow)%h%Creset (%ar - %Cred%an%Creset), %s%n'
@@ -70,5 +70,5 @@
 [include]
     path = ~/.gitconfig.personal
 
-[includeIf "gitdir:~/GitHub/lbg-cloud-platform/"]
+[includeIf "gitdir:~/source/work/"]
     path = ~/.gitconfig.work

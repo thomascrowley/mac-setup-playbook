@@ -185,8 +185,6 @@ brew "hashicorp/tap/sentinel"
 brew "hashicorp/tap/vault"
 # Free monospaced font with programming ligatures
 cask "font-fira-code"
-# Web browser
-cask "google-chrome"
 # Set of tools to manage resources and applications hosted on Google Cloud
 cask "google-cloud-sdk"
 # Open-source Markdown editor

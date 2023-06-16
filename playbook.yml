@@ -6,11 +6,11 @@
   vars_files:
     - secrets.yml
   vars:
-  #TODO: makae this work
-    # homebrew_use_brewfile: true
-    # homebrew_brewfile_dir: '~/.dotfiles'
-    homebrew_installed_packages:
-      - mysql
+    homebrew_use_brewfile: true
+    homebrew_brewfile_dir: '~/.dotfiles'
+
+    # homebrew_installed_packages:
+    #   - mysql
 
   roles:
     - elliotweiser.osx-command-line-tools
