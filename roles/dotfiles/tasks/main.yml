@@ -1,0 +1,11 @@
+- name: link dotfiles
+  file:
+    src: "~/.dotfiles/roles/dotfiles/files/{{ item.file }}"
+    dest: "~/.{{ item.file }}"
+    state: link
+    force: yes
+  with_items:
+    - file: vimrc
+    - file: zshrc
+    - file: p10k.zsh
+    - file: gitconfig

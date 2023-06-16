@@ -1,0 +1,10 @@
+#! /bin/bash
+
+echo "Good Morning"
+
+if  [[ $(date '+%a') == "Mon" ]]; then
+  echo "Happy Monday!"
+  echo "It's time to upgrade your packages"
+  brew update
+  brew upgrade
+fi

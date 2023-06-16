@@ -1,36 +1,23 @@
 tap "adoptopenjdk/openjdk"
-tap "caskroom/versions"
+tap "hashicorp/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
 tap "homebrew/core"
-tap "rhyeal/aws-rotate-iam-keys", "https://github.com/rhyeal/aws-rotate-iam-keys"
 tap "stefansundin/tap"
-tap "teamookla/speedtest"
 # C/C++ resolver library and DNS resolver utilities
 brew "adns"
-# GNU database manager
-brew "gdbm"
-# GNU internationalization (i18n) and localization (l10n) library
-brew "gettext"
-# Portable Foreign Function Interface library
-brew "libffi"
-# Library for command-line editing
-brew "readline"
-# General-purpose data compression with high compression ratio
-brew "xz"
-# Core application library for C
-brew "glib"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.8"
+# YAML Parser
+brew "libyaml"
+# Automate deployment, configuration, and upgrading
+brew "ansible"
 # Automatic configure script builder
 brew "autoconf"
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
-# Easily rotate your AWS access key
-brew "aws-rotate-key"
-# Official Amazon AWS command-line interface
-brew "awscli", link: false
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.10"
 # Microsoft Azure CLI 2.0
 brew "azure-cli"
 # Bourne-Again SHell, a UNIX command interpreter
@@ -43,8 +30,18 @@ brew "icu4c"
 brew "node"
 # Secure and free password manager for all of your devices
 brew "bitwarden-cli"
+# Freely available high-quality data compressor
+brew "bzip2"
+# GNU internationalization (i18n) and localization (l10n) library
+brew "gettext"
+# Core application library for C
+brew "glib"
+# Portable Foreign Function Interface library
+brew "libffi"
 # Manage compile and link flags for libraries
 brew "pkg-config"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.9"
 # Cross-platform make
 brew "cmake"
 # GNU multiple precision arithmetic library
@@ -63,6 +60,8 @@ brew "libssh2"
 brew "curl"
 # Command-line fuzzy finder written in Go
 brew "fzf"
+# GNU compiler collection
+brew "gcc"
 # GitHub command-line tool
 brew "gh"
 # Distributed revision control system
@@ -82,7 +81,7 @@ brew "nettle"
 # Library to load and enumerate PKCS#11 modules
 brew "p11-kit"
 # Validating, recursive, caching DNS resolver
-brew "unbound", link: false
+brew "unbound"
 # GNU Transport Layer Security (TLS) Library
 brew "gnutls"
 # Common error values for all GnuPG components
@@ -105,28 +104,20 @@ brew "gnupg"
 brew "go"
 # Fast linters runner for Go
 brew "golangci-lint"
-# Java-based scripting language
-brew "groovy"
+# GNU grep, egrep and fgrep
+brew "grep"
 # OpenType text shaping engine
 brew "harfbuzz"
-# Framework for layout and rendering of i18n text
-brew "pango"
+# Java-based scripting language
+brew "groovy"
 # Kubernetes package manager
 brew "helm"
-# Load testing and performance measurement application
-brew "jmeter"
-# Regular expressions library
-brew "oniguruma"
+# Command-line tools for OpenPGP-related operations
+brew "hopenpgp-tools"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
-# Run local Kubernetes cluster in Docker
-brew "kind"
 # Kubernetes command-line interface
 brew "kubernetes-cli"
-# LastPass command-line interface tool
-brew "lastpass-cli"
-# YAML Parser
-brew "libyaml"
 # Rainbows and unicorns in your console!
 brew "lolcat"
 # Utility for directing compilation
@@ -137,66 +128,80 @@ brew "mas"
 brew "maven"
 # Multiple Repository management tool
 brew "mr"
+# Tools for one-time password authentication systems
+brew "oath-toolkit"
 # Open source, general-purpose policy engine
 brew "opa"
 # Tool for creating identical machine images for multiple platforms
-brew "packer", link: false
+brew "packer"
 # Swiss-army knife of markup format conversion
 brew "pandoc"
+# Framework for layout and rendering of i18n text
+brew "pango"
 # Pinentry for GPG on Mac
 brew "pinentry-mac"
 # Tool for managing OCI containers and pods
 brew "podman"
-# Python version management
-brew "pyenv"
-# Pyenv plugin to manage virtualenv
-brew "pyenv-virtualenv"
-# Install various Ruby versions and implementations
-brew "ruby-build"
-# Ruby version manager
-brew "rbenv"
-# Auto-installs gems for Ruby installs
-brew "rbenv-default-gems"
-# Adds basic gemset support to rbenv
-brew "rbenv-gemset"
+# Framework for managing multi-language pre-commit hooks
+brew "pre-commit", link: false
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.8"
 # Powerful, clean, object-oriented scripting language
 brew "ruby"
-# Generate ASCII art with terminal, shell, and OS info
-brew "screenfetch"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
 # Prints a steam locomotive if you type sl instead of ls
 brew "sl"
 # User interface to the TELNET protocol
 brew "telnet"
+# Tool to generate documentation from Terraform modules
+brew "terraform-docs"
 # Improve Terraform's plan output
 brew "terraform_landscape"
 # Terraform version manager inspired by rbenv
-brew "tfenv", link: false
+brew "tfenv"
 # Linter for Terraform files
 brew "tflint"
+# Programmatically correct mistyped console commands
+brew "thefuck"
 # Terminal multiplexer
 brew "tmux"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Executes a program periodically, showing output fullscreen
+brew "watch"
 # Internet file retriever
 brew "wget"
+# Tool for managing your YubiKey configuration
+brew "ykman"
+# YubiKey personalization library and tool
+brew "ykpers"
+# Process YAML, JSON, XML, CSV and properties documents from the CLI
+brew "yq"
 # General-purpose lossless data-compression library
 brew "zlib"
-# Prebuilt OpenJDK binaries
-cask "adoptopenjdk8"
+brew "hashicorp/tap/sentinel"
+# Vault
+brew "hashicorp/tap/vault"
+# Free monospaced font with programming ligatures
 cask "font-fira-code"
-cask "java8"
-# Visual diff and merge tool
-cask "meld"
+# Set of tools to manage resources and applications hosted on Google Cloud
+cask "google-cloud-sdk"
+# Open-source Markdown editor
+cask "macdown"
+# Simple application that will prevent iTunes or Apple Music from launching
+cask "notunes"
+# Browse, manage, inspect containers and images
+cask "podman-desktop"
+# Collaboration platform for API development
+cask "postman"
+# Music streaming service
+cask "spotify"
 mas "Amphetamine", id: 937984704
 mas "Bitwarden", id: 1352778147
 mas "Developer", id: 640199958
 mas "Magnet", id: 441258766
 mas "Meeter", id: 1510445899
-mas "OneDrive", id: 823766827
-mas "Slack", id: 803453959
-mas "Tadam", id: 531349534
-mas "Todoist", id: 585829637
 mas "ToothFairy", id: 1191449274
 mas "Xcode", id: 497799835
+mas "Yubico Authenticator", id: 1497506650

@@ -1,2 +1,3 @@
 backups
-iterm2/*.itermcolors
+tmp
+secrets.yml

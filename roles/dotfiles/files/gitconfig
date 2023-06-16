@@ -1,0 +1,74 @@
+[user]
+    name = Thomas Crowley
+    useConfigOnly = true
+
+[color]
+    branch = auto
+    diff = auto
+    interactive = auto
+    status = auto
+
+[alias]
+    co = checkout
+    ci = commit
+    ce = commit --allow-empty -m 'empty commit'
+    st = status
+    dc = diff --cached
+    lg = log --decorate --stat --graph --pretty=format:'%C(yellow)%h%Creset (%ar - %Cred%an%Creset), %s%n'
+    lp = log -p
+    logp = log -p
+    br = branch
+    bl = branch -l
+    show-deleted = for-each-ref --format '%(refname:short) %(upstream:track)' | awk '$2 == "[gone]" {print $1}'
+    pom = pull origin main
+
+[help]
+    autocorrect = 20
+
+[core]
+    whitespace = cr-at-eol
+    excludesfile = ~/.gitignore
+    autocrlf = input
+    editor = vi
+
+[http]
+    sslVerify = false
+
+[pull]
+    rebase = true
+
+[push]
+    default = simple
+    autoSetupRemote = true
+
+[status]
+    showUntrackedFiles = all
+
+[commit]
+    gpgsign = true
+
+[remote "origin"]
+    prune = true
+
+[gpg]
+    program = gpg
+
+[init]
+    defaultBranch = main
+    templatedir = /Users/Thomas.Crowley/.git-templatedir
+
+[filter "lfs"]
+    process = git-lfs filter-process
+    required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+
+[credential]
+    helper = osxkeychain
+
+# https://markentier.tech/posts/2021/02/github-with-multiple-profiles-gpg-ssh-keys/
+[include]
+    path = ~/.gitconfig.personal
+
+[includeIf "gitdir:~/source/work/"]
+    path = ~/.gitconfig.work

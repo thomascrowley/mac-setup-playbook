@@ -1,4 +1,5 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+source ~/zsh-plugins/zsh-snap/znap.zsh
+# Enable Powerlevel11k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -67,12 +68,12 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     git
     battery
     zsh-autosuggestions
+    zsh-autocomplete
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -109,16 +110,10 @@ alias tar=gtar
 alias sed=gsed
 alias whatismyip="curl ifconfig.me"
 alias gcloudwhoami='gcloud auth list --format='\''value(account)'\'' --filter='\''status="ACTIVE"'\'
-
-export PATH="/usr/local/opt/ruby/bin:$PATH"
-export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
-
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-if command -v pyenv 1>/dev/null 2>&1; then
-    eval "$(pyenv init -)"
-fi
-eval "$(rbenv init -)"
+alias python='python3'
+alias pip='pip3'
+alias ruby-doctor='curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | bash'
+alias ruby='docker run -it ruby:3.2-rc ruby'
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
@@ -130,3 +125,9 @@ export PATH="$PATH:$HOME/.rvm/bin"
 export TF_PLUGIN_CACHE_DIR=~/.terraform_cache
 
 ulimit -n 1024
+
+eval $(thefuck --alias)
+
+jwt-decode(){
+jq -R 'split(".")|.[0:2]|map(@base64d)|map(fromjson)'<<< $1
+}
