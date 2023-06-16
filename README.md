@@ -3,8 +3,8 @@
 ## Prereqs
 
 * Ansible is installed
-TODO: ssh commands
-prerequisists
+<!-- TODO: add commands for setting up ansible -->
+<!-- add prerequisists -->
 
 
 ## Clone
