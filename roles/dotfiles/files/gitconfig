@@ -51,17 +51,17 @@
     prune = true
 
 [gpg]
-	program = gpg
+    program = gpg
 
 [init]
-	defaultBranch = main
-	templatedir = /Users/Thomas.Crowley/.git-templatedir
+    defaultBranch = main
+    templatedir = /Users/Thomas.Crowley/.git-templatedir
 
 [filter "lfs"]
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
 
 [credential]
     helper = osxkeychain
