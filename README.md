@@ -1,5 +1,7 @@
 # My Personal Dotfiles
 
+This is inspired by [geerlingguy/mac-dev-playbook](https://github.com/geerlingguy/mac-dev-playbook)
+
 ## Prereqs
 
 * Ansible is installed
@@ -9,7 +11,7 @@
 
 ## Clone
 
-`git clone https://github.com/ThomasCrowley/dotfiles ~/.dotfiles`
+`git clone https://github.com/ThomasCrowley/dotfiles ~/.mac-setup`
 
 ## Running
 
