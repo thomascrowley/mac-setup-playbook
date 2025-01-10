@@ -11,7 +11,7 @@ This is inspired by [geerlingguy/mac-dev-playbook](https://github.com/geerlinggu
 
 ## Clone
 
-`git clone https://github.com/ThomasCrowley/dotfiles ~/.mac-setup`
+`git clone https://github.com/ThomasCrowley/mac-setup-playbook ~/.mac-setup`
 
 ## Running
 
