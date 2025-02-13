@@ -6,16 +6,28 @@
   vars_files:
     - secrets.yml
   vars:
+    configure_dotfiles: true
+    dotfiles_repo: https://github.com/thomascrowley/dotfiles.git
+    dotfiles_repo_local_destination: ~/.dotfiles
+    dotfiles_repo_version: main
+    dotfiles_files:
+      - .gitconfig
+      - .p10k.zsh
+      - .vimrc
+      - .zshrc
     homebrew_use_brewfile: true
     homebrew_brewfile_dir: '~/.dotfiles'
+
 
     # homebrew_installed_packages:
     #   - mysql
 
   roles:
-    - elliotweiser.osx-command-line-tools
-    - geerlingguy.mac.homebrew
-    - ohmyzsh
-    - dotfiles
-    - fonts
-    - scripts
+    - role: elliotweiser.osx-command-line-tools
+    # - geerlingguy.mac.homebrew
+    - role: ohmyzsh
+    - role: geerlingguy.dotfiles
+      when: configure_dotfiles
+      tags: ['dotfiles']
+    - role: fonts
+    # - scripts
