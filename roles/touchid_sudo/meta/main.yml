@@ -1,0 +1,7 @@
+galaxy_info:
+  author: Thomas Crowley
+  description: Enable Touch ID authentication for sudo on macOS.
+  license: MIT
+  min_ansible_version: "2.9"
+
+dependencies: []

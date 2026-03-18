@@ -21,32 +21,14 @@ This is inspired by [geerlingguy/mac-dev-playbook](https://github.com/geerlinggu
 ansible-galaxy install -r requirements.yml
 ```
 
-### Set up Ansible Vault
-
-We are using [ansible vault](https://docs.ansible.com/ansible/latest/vault_guide/index.html#creating-encrypted-variables) to protect the secrets. First we need to add the sudo password into the vault.
-
-First create your encrypted file
+I am using ansible-playbook to set up my mac. To plan the changes run:
 
 ```bash
-ansible-vault create secrets.yml
-```
-
-Write your sudo password into the file.
-
-```yml
----
-ansible_become_password: mysecretsudopasssworkd4
-```
-
-
-I am usign ansible-playbook to set up my dotfiles. To plan the changes run:
-
-```bash
-ansible-playbook playbook.yml --ask-vault-pass --check
+ansible-playbook playbook.yml --ask-become-pass --check
 ```
 
 Then to apply them run
 
 ```bash
-ansible-playbook playbook.yml --ask-vault-pass
+ansible-playbook playbook.yml --ask-become-pass
 ```

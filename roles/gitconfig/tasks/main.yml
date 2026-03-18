@@ -1,0 +1,25 @@
+- name: Create personal gitconfig override stub
+  copy:
+    dest: "{{ lookup('env', 'HOME') }}/.config/git/personal"
+    mode: '0644'
+    force: no
+    content: |
+      # Local git configuration overrides.
+      # Add personal settings here, for example:
+      #
+      # [user]
+      #   name = Your Name
+      #   email = you@example.com
+
+- name: Create work gitconfig override stub
+  copy:
+    dest: "{{ lookup('env', 'HOME') }}/.config/git/clients"
+    mode: '0644'
+    force: no
+    content: |
+      # Local git configuration overrides.
+      # Add personal settings here, for example:
+      #
+      # [user]
+      #   name = Your Name
+      #   email = you@example.com

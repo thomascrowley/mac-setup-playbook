@@ -1,0 +1,9 @@
+- name: Enable Touch ID for sudo via sudo_local
+  become: true
+  lineinfile:
+    path: /etc/pam.d/sudo_local
+    create: true
+    owner: root
+    group: wheel
+    mode: "0644"
+    line: "auth       sufficient     pam_tid.so"

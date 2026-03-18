@@ -12,3 +12,11 @@ repos:
       rev: 2.6.2
       hooks:
           - id: editorconfig-checker
+    - repo: local
+      hooks:
+          - id: ansible-playbook-syntax-check
+            name: Ansible playbook syntax check
+            entry: env ANSIBLE_LOCAL_TEMP=/tmp/ansible-local ANSIBLE_REMOTE_TEMP=/tmp/ansible-remote ansible-playbook playbook.yml --syntax-check
+            language: system
+            pass_filenames: false
+            files: '(^playbook\.yml$|^requirements\.yml$|^ansible\.cfg$|^roles/.*\.(yml|yaml)$)'
